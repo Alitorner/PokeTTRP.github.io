@@ -1,50 +1,133 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Main heading styling */
 h1 {
-    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
+    color: #34495e;
 }
 
+/* Styling for the container that holds the columns */
 .container {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    width: 80%;
+    margin-top: 30px;
+    padding: 0 20px;
+    gap: 20px;
 }
 
+/* Each column styling */
 .column {
-    width: 30%;
-    border: 1px solid black;
-    padding: 10px;
-    box-sizing: border-box;
+    width: 32%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-.column h2 {
+.column:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
     text-align: center;
-    margin-top: 0;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
 }
 
+/* Styling for the field effect boxes */
 .field-effect {
-    border: 1px solid black;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-.field-effect .name-turns {
+.name-turns {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-.field-effect .name-turns input {
+.name-turns input {
     width: 48%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
 }
 
-.field-effect .description textarea {
+.name-turns input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Styling for the description text area */
+textarea {
     width: 100%;
-    height: 50px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    resize: vertical;
+    min-height: 80px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button styling */
+.add-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }
