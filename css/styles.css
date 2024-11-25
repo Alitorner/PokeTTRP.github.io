@@ -32,7 +32,7 @@ h1 {
 
 /* Each column styling */
 .column {
-    width: 32%;
+    width: 32%; /* Ensures three columns fit side by side */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -127,7 +127,7 @@ textarea:focus {
     }
 
     .column {
-        width: 90%;
+        width: 90%; /* Make the columns take up more space on small screens */
         margin-bottom: 20px;
     }
 }
