@@ -9,31 +9,31 @@ function addFieldEffect(columnId) {
         <div class="name-turns">
             <input type="text" placeholder="Name">
             <select name="turns_global">
-                        <option>Indefinite</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                    </select>
+                <option>Indefinite</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+            </select>
         </div>
         <div class="description">
             <textarea placeholder="Description"></textarea>
         </div>
+        <button class="remove-button" onclick="removeFieldEffect(this)">Remove</button>
     `;
 
-    // Aggiunge il nuovo campo alla colonna
+    // Aggiunge il nuovo campo alla colonna prima del pulsante "Add Field Effect"
     column.insertBefore(newFieldEffect, column.querySelector('.add-button'));
 }
 
-function removeFieldEffect(){
-    // Trova la colonna
-    const column = document.getElementById(columnId);
+function removeFieldEffect(button) {
+    // Trova il contenitore del campo "Field Effect" associato al pulsante
+    const fieldEffect = button.parentElement;
 
-    column.removeChild()
-
-
+    // Rimuovi il campo "Field Effect" dal suo genitore
+    fieldEffect.remove();
 }
