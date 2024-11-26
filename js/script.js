@@ -8,7 +8,17 @@ function addFieldEffect(columnId) {
     newFieldEffect.innerHTML = `
         <div class="name-turns">
             <input type="text" placeholder="Name">
-            <input type="text" placeholder="Turns">
+            <select name="turns_global">
+                        <option>Indefinite</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                    </select>
         </div>
         <div class="description">
             <textarea placeholder="Description"></textarea>
@@ -17,4 +27,13 @@ function addFieldEffect(columnId) {
 
     // Aggiunge il nuovo campo alla colonna
     column.insertBefore(newFieldEffect, column.querySelector('.add-button'));
+}
+
+function removeFieldEffect(){
+    // Trova la colonna
+    const column = document.getElementById(columnId);
+
+    column.removeChild()
+
+
 }
