@@ -85,6 +85,7 @@ h1 {
     border-radius: 5px;
     font-size: 1rem;
     box-sizing: border-box;
+    resize: vertical;
 }
 
 /* Pulsanti */
